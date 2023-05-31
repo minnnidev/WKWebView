@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		ABACB3592A276A2E00E79B90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABACB3582A276A2E00E79B90 /* AppDelegate.swift */; };
 		ABACB35B2A276A2E00E79B90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABACB35A2A276A2E00E79B90 /* SceneDelegate.swift */; };
-		ABACB35D2A276A2E00E79B90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABACB35C2A276A2E00E79B90 /* ViewController.swift */; };
+		ABACB35D2A276A2E00E79B90 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABACB35C2A276A2E00E79B90 /* WebViewController.swift */; };
 		ABACB3622A276A2F00E79B90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABACB3612A276A2F00E79B90 /* Assets.xcassets */; };
 		ABACB3652A276A2F00E79B90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABACB3632A276A2F00E79B90 /* LaunchScreen.storyboard */; };
 		ABACB3702A276A2F00E79B90 /* WebView_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABACB36F2A276A2F00E79B90 /* WebView_TestTests.swift */; };
 		ABACB37A2A276A2F00E79B90 /* WebView_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABACB3792A276A2F00E79B90 /* WebView_TestUITests.swift */; };
 		ABACB37C2A276A2F00E79B90 /* WebView_TestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABACB37B2A276A2F00E79B90 /* WebView_TestUITestsLaunchTests.swift */; };
+		ABACB38A2A276B3000E79B90 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = ABACB3892A276B3000E79B90 /* SnapKit */; };
+		ABACB38D2A276B3700E79B90 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = ABACB38C2A276B3700E79B90 /* Then */; };
+		ABACB3902A276BA900E79B90 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABACB38F2A276BA900E79B90 /* WebKit.framework */; };
+		ABACB3922A276D7500E79B90 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABACB3912A276D7500E79B90 /* FirstViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +42,7 @@
 		ABACB3552A276A2E00E79B90 /* WebView-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WebView-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABACB3582A276A2E00E79B90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABACB35A2A276A2E00E79B90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ABACB35C2A276A2E00E79B90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ABACB35C2A276A2E00E79B90 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		ABACB3612A276A2F00E79B90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABACB3642A276A2F00E79B90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABACB3662A276A2F00E79B90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +51,8 @@
 		ABACB3752A276A2F00E79B90 /* WebView-TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WebView-TestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABACB3792A276A2F00E79B90 /* WebView_TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView_TestUITests.swift; sourceTree = "<group>"; };
 		ABACB37B2A276A2F00E79B90 /* WebView_TestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView_TestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ABACB38F2A276BA900E79B90 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		ABACB3912A276D7500E79B90 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABACB3902A276BA900E79B90 /* WebKit.framework in Frameworks */,
+				ABACB38A2A276B3000E79B90 /* SnapKit in Frameworks */,
+				ABACB38D2A276B3700E79B90 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +90,7 @@
 				ABACB36E2A276A2F00E79B90 /* WebView-TestTests */,
 				ABACB3782A276A2F00E79B90 /* WebView-TestUITests */,
 				ABACB3562A276A2E00E79B90 /* Products */,
+				ABACB38E2A276BA900E79B90 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,7 +109,8 @@
 			children = (
 				ABACB3582A276A2E00E79B90 /* AppDelegate.swift */,
 				ABACB35A2A276A2E00E79B90 /* SceneDelegate.swift */,
-				ABACB35C2A276A2E00E79B90 /* ViewController.swift */,
+				ABACB3912A276D7500E79B90 /* FirstViewController.swift */,
+				ABACB35C2A276A2E00E79B90 /* WebViewController.swift */,
 				ABACB3612A276A2F00E79B90 /* Assets.xcassets */,
 				ABACB3632A276A2F00E79B90 /* LaunchScreen.storyboard */,
 				ABACB3662A276A2F00E79B90 /* Info.plist */,
@@ -124,6 +135,14 @@
 			path = "WebView-TestUITests";
 			sourceTree = "<group>";
 		};
+		ABACB38E2A276BA900E79B90 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ABACB38F2A276BA900E79B90 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,6 +159,10 @@
 			dependencies = (
 			);
 			name = "WebView-Test";
+			packageProductDependencies = (
+				ABACB3892A276B3000E79B90 /* SnapKit */,
+				ABACB38C2A276B3700E79B90 /* Then */,
+			);
 			productName = "WebView-Test";
 			productReference = ABACB3552A276A2E00E79B90 /* WebView-Test.app */;
 			productType = "com.apple.product-type.application";
@@ -212,6 +235,10 @@
 				Base,
 			);
 			mainGroup = ABACB34C2A276A2E00E79B90;
+			packageReferences = (
+				ABACB3882A276B3000E79B90 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				ABACB38B2A276B3700E79B90 /* XCRemoteSwiftPackageReference "Then" */,
+			);
 			productRefGroup = ABACB3562A276A2E00E79B90 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -254,9 +281,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABACB35D2A276A2E00E79B90 /* ViewController.swift in Sources */,
+				ABACB35D2A276A2E00E79B90 /* WebViewController.swift in Sources */,
 				ABACB3592A276A2E00E79B90 /* AppDelegate.swift in Sources */,
 				ABACB35B2A276A2E00E79B90 /* SceneDelegate.swift in Sources */,
+				ABACB3922A276D7500E79B90 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +616,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ABACB3882A276B3000E79B90 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		ABACB38B2A276B3700E79B90 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ABACB3892A276B3000E79B90 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABACB3882A276B3000E79B90 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		ABACB38C2A276B3700E79B90 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABACB38B2A276B3700E79B90 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ABACB34D2A276A2E00E79B90 /* Project object */;
 }
