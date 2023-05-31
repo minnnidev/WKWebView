@@ -53,7 +53,8 @@ extension FirstViewController {
     // MARK: - @objc Methods
     
     @objc private func naverButtonDidTap() {
-        let vc = UINavigationController(rootViewController: WebViewController())
+        guard let url = URL(string: "https://m.naver.com") else { return }
+        let vc = UINavigationController(rootViewController: WebViewController(url: url))
         vc.modalPresentationStyle = .overFullScreen
         present(vc, animated: true)
     }

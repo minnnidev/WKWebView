@@ -15,8 +15,33 @@ final class WebViewController: UIViewController {
     
     // MARK: - UI Components
     
-    private let webView = WKWebView()
-
+    private let webView: WKWebView = {
+        let preferences = WKPreferences()
+        preferences.javaScriptEnabled = true
+        let configuration = WKWebViewConfiguration()
+        configuration.preferences = preferences
+        let webView = WKWebView(frame: .zero, configuration: configuration)
+        return webView
+    }()
+    
+    // MARK: - Properties
+    
+    private let url: URL
+    
+    // MARK: - Initializer
+    
+    init(url: URL) {
+        self.url = url
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,6 +50,12 @@ final class WebViewController: UIViewController {
         setWebView()
         setNavigationBar()
         setDelegate()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        webView.frame = view.bounds
     }
 }
 
@@ -39,17 +70,11 @@ extension WebViewController {
     
     private func setLayout() {
         view.addSubview(webView)
-        
-        webView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
-        }
     }
     
     private func setWebView() {
-        let url = URL(string: "https://m.naver.com")
-        let request = URLRequest(url: url!)
-        webView.configuration.defaultWebpagePreferences.allowsContentJavaScript = true
-        webView.load(request)
+        let request = URLRequest(url: url)
+        self.webView.load(request)
     }
     
     private func setNavigationBar() {
