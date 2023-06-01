@@ -1,3 +1,6 @@
+
+
+
 //
 //  ViewController.swift
 //  WebView-Test
@@ -17,9 +20,9 @@ final class WebViewController: UIViewController {
     
     private let webView: WKWebView = {
         let preferences = WKPreferences()
-        preferences.javaScriptEnabled = true
         let configuration = WKWebViewConfiguration()
         configuration.preferences = preferences
+        configuration.defaultWebpagePreferences.allowsContentJavaScript = true
         let webView = WKWebView(frame: .zero, configuration: configuration)
         return webView
     }()
@@ -27,6 +30,7 @@ final class WebViewController: UIViewController {
     // MARK: - Properties
     
     private let url: URL
+    private let html = "" // html 코드 삽입
     
     // MARK: - Initializer
     
@@ -73,8 +77,9 @@ extension WebViewController {
     }
     
     private func setWebView() {
-        let request = URLRequest(url: url)
-        self.webView.load(request)
+//        let request = URLRequest(url: url)
+//        self.webView.load(request)
+        self.webView.loadHTMLString(html, baseURL: Bundle.main.resourceURL)
     }
     
     private func setNavigationBar() {
